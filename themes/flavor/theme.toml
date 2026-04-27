@@ -1,0 +1,9 @@
+name = "Flavor"
+license = "MIT"
+licenselink = "https://github.com/yourname/flavor/blob/master/LICENSE"
+description = "A bold, creative portfolio theme for Hugo"
+tags = ["portfolio", "blog", "creative", "bold"]
+min_version = "0.100.0"
+
+[author]
+  name = "Kundan Kumar"

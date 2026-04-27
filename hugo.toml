@@ -1,0 +1,62 @@
+baseURL = "https://kundaniitr07.github.io/bydesign/"
+languageCode = "en-us"
+title = "KD — Product Architect & Designer"
+theme = "flavor"
+[pagination]
+  pagerSize = 6
+enableRobotsTXT = true
+enableEmoji = true
+
+[params]
+  author = "Kundan Kumar"
+  description = "Product thinker. Systems architect. Innovation builder."
+  tagline = "I design products that scale, systems that endure, and experiences that matter."
+
+  [params.hero]
+    headline = "Building Products That Matter"
+    subheadline = "Product Architect & Designer — turning complex problems into elegant, scalable solutions."
+    ctaText = "See My Work"
+    ctaLink = "/projects/"
+
+  [params.contact]
+    email = "kundan.kumar@prozo.com"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+  [[menu.main]]
+    name = "Case Studies"
+    url = "/case-studies/"
+    weight = 3
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 4
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 5
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 6
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "dracula"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"

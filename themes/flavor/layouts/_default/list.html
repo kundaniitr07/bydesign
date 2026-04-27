@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <span class="section-tag">{{ .Title }}</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="page-description">{{ . }}</div>{{ end }}
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="projects-grid">
+      {{ range .Pages }}
+      <a href="{{ .Permalink }}" class="project-card">
+        <div class="project-card-inner">
+          <div class="project-meta">
+            {{ with .Params.category }}<span class="project-category">{{ . }}</span>{{ end }}
+            <span class="project-year">{{ .Date.Format "Jan 2006" }}</span>
+          </div>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.summary | default (.Summary | truncate 150) }}</p>
+          {{ with .Params.tags }}
+          <div class="project-tags">
+            {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
