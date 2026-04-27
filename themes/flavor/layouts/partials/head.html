@@ -4,5 +4,48 @@
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      darkMode: true,
+      background: '#0a0a14',
+      primaryColor: '#7c6bf0',
+      primaryTextColor: '#f0f0f5',
+      primaryBorderColor: '#7c6bf0',
+      secondaryColor: '#1a1a2e',
+      secondaryTextColor: '#a0a0b8',
+      secondaryBorderColor: '#2a2a3a',
+      tertiaryColor: '#0d1117',
+      tertiaryTextColor: '#a0a0b8',
+      lineColor: '#00e5c8',
+      textColor: '#f0f0f5',
+      mainBkg: '#12121f',
+      nodeBorder: '#7c6bf0',
+      clusterBkg: 'rgba(124,107,240,0.06)',
+      clusterBorder: 'rgba(124,107,240,0.2)',
+      titleColor: '#00e5c8',
+      edgeLabelBackground: '#0a0a14',
+      nodeTextColor: '#f0f0f5',
+      actorTextColor: '#f0f0f5',
+      actorLineColor: '#7c6bf0',
+      signalColor: '#00e5c8',
+      signalTextColor: '#f0f0f5',
+      labelBoxBkgColor: '#12121f',
+      labelBoxBorderColor: '#7c6bf0',
+      labelTextColor: '#f0f0f5',
+      loopTextColor: '#00e5c8',
+      noteBkgColor: 'rgba(124,107,240,0.1)',
+      noteTextColor: '#f0f0f5',
+      noteBorderColor: '#7c6bf0',
+      fontFamily: 'Space Grotesk, sans-serif',
+      fontSize: '14px'
+    },
+    flowchart: { curve: 'basis', padding: 20 },
+    sequence: { mirrorActors: false }
+  });
+</script>

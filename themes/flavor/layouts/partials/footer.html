@@ -2,20 +2,20 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="logo">KD<span class="logo-dot">.</span></a>
+        <a href="{{ .Site.BaseURL }}" class="logo">KD<span class="logo-dot">.</span></a>
         <p>{{ .Site.Params.tagline }}</p>
       </div>
       <div class="footer-links">
         <h4>Navigate</h4>
         {{ range .Site.Menus.main }}
-          <a href="{{ .URL }}">{{ .Name }}</a>
+          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
         {{ end }}
       </div>
       <div class="footer-connect">
         <h4>Connect</h4>
         <a href="mailto:{{ .Site.Params.contact.email }}">Email</a>
         <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+        <a href="https://github.com/kundaniitr07" target="_blank">GitHub</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -23,4 +23,4 @@
     </div>
   </div>
 </footer>
-<script src="/js/main.js"></script>
+<script src="{{ "js/main.js" | relURL }}"></script>
